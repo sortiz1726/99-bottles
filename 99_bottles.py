@@ -16,10 +16,7 @@ def bottle_line_one(bottle_count):
 
 def bottle_line_two(bottle_count):
     MESSAGE = bottle_message(bottle_count)
-    return "Take one down and pass it around, " + MESSAGE + " of beer on the wall."
-
-def bottle_line(bottle_count):
-    return bottle_line_one(bottle_count) + "\n" + bottle_line_two(bottle_count - 1)
+    return f"Take one down and pass it around, {MESSAGE} of beer on the wall.\n"
 
 def bottle_line_final(bottle_count):
     MESSAGE = bottle_message(bottle_count)

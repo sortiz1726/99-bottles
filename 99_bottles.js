@@ -1,6 +1,30 @@
-function capitalize(string)
+bottleSong();
+
+function bottleSong() 
 {
-    return string[0].toUpperCase() + string.substring(1).toLowerCase();
+  const TOTAL_BOTTLES = 20;
+  
+  let bottleCount = TOTAL_BOTTLES;
+  for(; bottleCount >= 1; --bottleCount)
+  {
+      console.log(bottleLineOne(bottleCount));
+      console.log(bottleLineTwo(bottleCount - 1));
+  }
+  
+  console.log(bottleLineOne(bottleCount));
+  console.log(bottleLineFinal(TOTAL_BOTTLES));
+}
+
+function bottleLineOne(bottleCount)
+{
+    const message = bottleMessage(bottleCount);
+    return capitalize(`${message} of beers on the wall, ${message} of beer`);
+}
+
+function bottleLineTwo(bottleCount)
+{
+    const message = bottleMessage(bottleCount);
+    return `Take one down and pass it around, ${message} of beer on the wall.\n`
 }
 
 function bottleMessage(bottleCount)
@@ -23,21 +47,9 @@ function bottleMessage(bottleCount)
     return result;
 }
 
-function bottleLineOne(bottleCount)
+function capitalize(string)
 {
-    const message = bottleMessage(bottleCount);
-    return capitalize(message + " of beer on the wall, " + message + " of beer.");
-}
-
-function bottleLineTwo(bottleCount)
-{
-    const message = bottleMessage(bottleCount);
-    return "Take one down and pass it around, " + message + " of beer on the wall."
-}
-
-function bottleLine(bottleCount)
-{
-    return bottleLineOne(bottleCount) + "\n" + bottleLineTwo(bottleCount - 1);
+    return string[0].toUpperCase() + string.substring(1).toLowerCase();
 }
 
 function bottleLineFinal(bottleCount)
@@ -45,20 +57,3 @@ function bottleLineFinal(bottleCount)
     const message = bottleMessage(bottleCount);
     return "Go to the store and buy some more, " + message + " of beer on the wall."
 }
-
-function bottleSong() 
-{
-  const TOTAL_BOTTLES = 99;
-  
-  let bottleCount = TOTAL_BOTTLES;
-  for(; bottleCount >= 1; --bottleCount)
-  {
-      console.log(bottleLineOne(bottleCount));
-      console.log(bottleLineTwo(bottleCount - 1));
-  }
-  
-  console.log(bottleLineOne(bottleCount));
-  console.log(bottleLineFinal(TOTAL_BOTTLES));
-};
-
-bottleSong();
