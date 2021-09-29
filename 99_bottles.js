@@ -1,8 +1,8 @@
-bottleSong();
+//bottleSong();
 
 function bottleSong() 
 {
-  const TOTAL_BOTTLES = 20;
+  const TOTAL_BOTTLES = 99;
   
   let bottleCount = TOTAL_BOTTLES;
   for(; bottleCount >= 1; --bottleCount)
