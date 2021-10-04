@@ -1,4 +1,4 @@
-//bottleSong();
+bottleSong();
 
 function bottleSong() 
 {
@@ -14,6 +14,24 @@ function bottleSong()
   console.log(bottleLineOne(bottleCount));
   console.log(bottleLineFinal(TOTAL_BOTTLES));
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function bottleLineOne(bottleCount)
 {
